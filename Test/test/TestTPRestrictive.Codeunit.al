@@ -31,7 +31,7 @@ codeunit 84101 "Test TP Restrictive FLX"
     begin
         LibraryTestInitialize.OnTestInitialize(Codeunit::"Test TP Restrictive FLX");
 
-        LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
+        // LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
 
         if IsInitialized then
             exit;

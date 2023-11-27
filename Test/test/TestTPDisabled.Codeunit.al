@@ -11,6 +11,7 @@ codeunit 84100 "Test TP Disabled FLX"
         CreateTestTable();
 
         LibraryLowerTestPermissions.StartLoggingNAVPermissions('D365 FULL ACCESS');
+        LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
 
         CreateTestTable();
     end;

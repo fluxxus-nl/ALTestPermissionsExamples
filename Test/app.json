@@ -1,0 +1,69 @@
+{
+    "id": "4d5aa84e-5883-4b93-8f5c-7c4f09902cd7",
+    "name": "TestPermissionTest test app",
+    "publisher": "fluxxus.nl",
+    "version": "1.0.0.0",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "503632db-9392-4d1a-b6e0-770f167b3556",
+            "publisher": "fluxxus.nl",
+            "version": "1.0.0.0",
+            "name": "TestPermissionTest app"
+        },
+        {
+            "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+            "publisher": "Microsoft",
+            "version": "23.0.0.0",
+            "name": "Any"
+        },
+        {
+            "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+            "publisher": "Microsoft",
+            "version": "23.0.0.0",
+            "name": "Library Assert"
+        },
+        {
+            "id": "5095f467-0a01-4b99-99d1-9ff1237d286f",
+            "publisher": "Microsoft",
+            "version": "23.0.0.0",
+            "name": "Library Variable Storage"
+        },
+        {
+            "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+            "publisher": "Microsoft",
+            "version": "23.0.0.0",
+            "name": "Tests-TestLibraries"
+        },
+        {
+        "id":  "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+        "name":  "Test Runner",
+        "publisher":  "Microsoft",
+        "version":  "23.0.0.0"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "23.0.0.0",
+    "idRanges": [
+    {
+        "from": 84100,
+        "to": 84149
+    }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "12.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}

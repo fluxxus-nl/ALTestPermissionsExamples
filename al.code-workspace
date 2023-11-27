@@ -2,7 +2,13 @@
     "folders": [
         {
             "path": ".AL-Go"
-        }
+        },
+		{
+			"path": "./App"
+		},
+		{
+			"path": "./Test"
+		}		
     ],
     "settings": {}
 }

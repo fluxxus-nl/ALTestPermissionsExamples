@@ -11,6 +11,14 @@ codeunit 84102 "Test TP NonRestrictive FLX"
         CreateTestTable();
     end;
 
+    [Test]
+    procedure TestTestPermissionsNonRestrictive2()
+    begin
+        Initialize();
+
+        CreateTestTable();
+    end;
+
     var
         Any: Codeunit "Any";
         LibraryLowerTestPermissions: Codeunit "Library - Lower Permissions";

@@ -11,6 +11,14 @@ codeunit 84100 "Test TP Disabled FLX"
         CreateTestTable();
     end;
 
+    [Test]
+    procedure TestTestPermissionsDisable2()
+    begin
+        Initialize();
+
+        CreateTestTable();
+    end;
+
     var
         Any: Codeunit "Any";
         IsInitialized: Boolean;

@@ -13,7 +13,6 @@ codeunit 84102 "Test TP NonRestrictive FLX"
 
     var
         Any: Codeunit "Any";
-        LibraryLowerTestPermissions: Codeunit "Library - Lower Permissions";
         IsInitialized: Boolean;
 
     local procedure Initialize()
@@ -26,8 +25,6 @@ codeunit 84102 "Test TP NonRestrictive FLX"
             exit;
 
         LibraryTestInitialize.OnBeforeTestSuiteInitialize(Codeunit::"Test TP NonRestrictive FLX");
-
-        LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
 
         IsInitialized := true;
 

@@ -11,9 +11,18 @@ codeunit 84100 "Test TP Disabled FLX"
         CreateTestTable();
     end;
 
+    [Test]
+    procedure TestTestPermissionsDisabled2()
+    begin
+        Initialize();
+
+        CreateTestTable();
+    end;
+
     var
         Any: Codeunit "Any";
         IsInitialized: Boolean;
+        Counter: Integer;
 
     local procedure Initialize()
     var
@@ -35,7 +44,11 @@ codeunit 84100 "Test TP Disabled FLX"
     var
         TestTable: Record "Test Table FLX";
     begin
+        Any.SetSeed(Counter);
+
         TestTable.Code := Any.AlphabeticText(MaxStrLen(TestTable.Code));
         TestTable.Insert();
+
+        Counter += 1;
     end;
 }

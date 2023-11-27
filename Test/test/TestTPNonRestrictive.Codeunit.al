@@ -11,10 +11,19 @@ codeunit 84102 "Test TP NonRestrictive FLX"
         CreateTestTable();
     end;
 
+    [Test]
+    procedure TestTestPermissionsNonRestrictive2()
+    begin
+        Initialize();
+
+        CreateTestTable();
+    end;
+
     var
         Any: Codeunit "Any";
         LibraryLowerTestPermissions: Codeunit "Library - Lower Permissions";
         IsInitialized: Boolean;
+        Counter: Integer;
 
     local procedure Initialize()
     var
@@ -22,12 +31,12 @@ codeunit 84102 "Test TP NonRestrictive FLX"
     begin
         LibraryTestInitialize.OnTestInitialize(Codeunit::"Test TP NonRestrictive FLX");
 
+        LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
+
         if IsInitialized then
             exit;
 
         LibraryTestInitialize.OnBeforeTestSuiteInitialize(Codeunit::"Test TP NonRestrictive FLX");
-
-        LibraryLowerTestPermissions.AddPermissionSet('Test Permissions FLX');
 
         IsInitialized := true;
 
@@ -38,7 +47,11 @@ codeunit 84102 "Test TP NonRestrictive FLX"
     var
         TestTable: Record "Test Table FLX";
     begin
+        Any.SetSeed(Counter);
+
         TestTable.Code := Any.AlphabeticText(MaxStrLen(TestTable.Code));
         TestTable.Insert();
+
+        Counter += 1;
     end;
 }

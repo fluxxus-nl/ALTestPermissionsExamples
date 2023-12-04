@@ -15,6 +15,7 @@ codeunit 84102 "Test TP NonRestrictive FLX"
         Any: Codeunit "Any";
         LibraryLowerTestPermissions: Codeunit "Library - Lower Permissions";
         IsInitialized: Boolean;
+        Counter: Integer;
 
     local procedure Initialize()
     var
@@ -38,7 +39,11 @@ codeunit 84102 "Test TP NonRestrictive FLX"
     var
         TestTable: Record "Test Table FLX";
     begin
+        Any.SetSeed(Counter);
+
         TestTable.Code := Any.AlphabeticText(MaxStrLen(TestTable.Code));
         TestTable.Insert();
+
+        Counter += 1;
     end;
 }

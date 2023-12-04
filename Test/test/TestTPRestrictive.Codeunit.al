@@ -14,6 +14,7 @@ codeunit 84101 "Test TP Restrictive FLX"
     var
         Any: Codeunit "Any";
         IsInitialized: Boolean;
+        Counter: Integer;
 
     local procedure Initialize()
     var
@@ -35,7 +36,11 @@ codeunit 84101 "Test TP Restrictive FLX"
     var
         TestTable: Record "Test Table FLX";
     begin
+        Any.SetSeed(Counter);
+
         TestTable.Code := Any.AlphabeticText(MaxStrLen(TestTable.Code));
         TestTable.Insert();
+
+        Counter += 1;
     end;
 }
